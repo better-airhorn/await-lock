@@ -12,7 +12,8 @@
     "build": "tsc",
     "lint": "tsc --noEmit",
     "prepare": "npm run clean && npm run build",
-    "test": "jest"
+    "test": "jest",
+    "prepack": "tsc --outDir ./build"
   },
   "repository": {
     "type": "git",
