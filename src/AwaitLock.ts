@@ -14,6 +14,14 @@ export default class AwaitLock {
   }
 
   /**
+   * How long the queue of locks is
+   * Accessing this property does not affect the status of the lock.
+   */
+  get resolverLength(): number {
+    return this._waitingResolvers.length
+  }
+
+  /**
    * Acquires the lock, waiting if necessary for it to become free if it is already locked. The
    * returned promise is fulfilled once the lock is acquired.
    *
